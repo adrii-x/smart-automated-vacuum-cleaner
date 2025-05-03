@@ -62,7 +62,8 @@
       <!-- Middle Section -->
       <div class="middle-section">
         <!-- Upper Section: Distance Indicator -->
-        <div class="distance-indicator">
+        <div class="distance-indicator precise">
+
           <!-- <div class="bars">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -132,7 +133,29 @@
                 </div>
               </div>
             </div>
-            <div class="radar_radar"></div>
+            <div class="radar_radar">
+
+              <div class="radar-container" id="radarContainer">
+                <button class="radar-close-button" onclick="">
+                  <!-- <i class="fa-solid fa-xmark"></i> -->
+                  <i class="fa-solid fa-location-crosshairs"></i>
+                </button>
+                <canvas id="radarCanvas"></canvas>
+
+                <div class="data-display">
+                    <div>Angle: <span id="angleDisplay">0</span>°</div>
+                    <div>Dist: <span id="distanceDisplay">0</span>cm</div>
+                </div>
+
+                <div class="status" id="statusDisplay">Ready</div>
+                <div class="control-panel">
+                    <button class="scan-button" id="scanButton">SCAN</button>
+                    <button class="scan-button" id="clearButton">CLEAR</button>
+                </div>
+            </div>
+            </div>
+
+
             <div class="distance_to_travel">
               <div class="input-group max">
                 <label for="gridHeight">Max(x)</label>
